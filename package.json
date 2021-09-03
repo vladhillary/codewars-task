@@ -1,0 +1,27 @@
+{
+  "name": "codewars",
+  "version": "1.0.0",
+  "description": "test",
+  "main": "index.html",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vladhillary/codewars-task.git"
+  },
+  "keywords": [
+    "testing",
+    "js"
+  ],
+  "author": "vlad hristoforov",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/vladhillary/codewars-task/issues"
+  },
+  "homepage": "https://github.com/vladhillary/codewars-task#readme",
+  "devDependencies": {
+    "@types/jest": "^27.0.1",
+    "jest": "^27.1.0"
+  }
+}

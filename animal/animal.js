@@ -54,3 +54,10 @@ class Dog extends Animal {
     return `Hello ${this.master}`;
   }
 }
+
+module.exports = {
+  Animal,
+  Dog,
+  Cat,
+  Shark
+}
