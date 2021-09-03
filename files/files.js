@@ -2,7 +2,7 @@
 
 class File {
 
-    constructor(fullname, contents) {
+    constructor(fullname = 'example.txt', contents='') {
         this._fullname = fullname
         this._filename = contents
         this._extension = this._fullname.split('.').pop();
@@ -57,3 +57,5 @@ class File {
         return arrWithContent[index]
     }
 }
+
+module.exports = File
