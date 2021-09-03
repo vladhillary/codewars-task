@@ -9,18 +9,38 @@ class Cuboid {
 
     get surfaceArea() {
 
-        return 2 * (this.length * this.width + this.width * this.height + this.height * this.length);
+        return 6 * Math.pow(this.length, 2);
     }
 
     get volume() {
 
-        return this.height * this.width * this.length;
+        return this.length * this.length * this.length;
+    }
+
+    set surfaceArea(sA) {
+        this.length = Math.pow(sA / 6, 1 / 2)
+    }
+    set volume(v) {
+        this.length = Math.pow(v, 1 / 3)
     }
 }
+
 class Cube extends Cuboid {
 
     constructor(length) {
-
-        super(length, length, length);
+        super()
+        this.length = length
+    }
+    get surfaceArea() {
+        return 6 * Math.pow(this.length, 2)
+    }
+    get volume() {
+        return this.length * this.length * this.length
+    }
+    set surfaceArea(sA) {
+        this.length = Math.pow(sA / 6, 1 / 2)
+    }
+    set volume(v) {
+        this.length = Math.pow(v, 1 / 3)
     }
 }
