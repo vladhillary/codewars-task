@@ -19,4 +19,9 @@ describe('Return values', () => {
         expect(pyramid(null)).toBe('Enter a number')
         expect(pyramid(undefined)).toBe('Enter a number')
     })
+
+    it('length of results', () => {
+        expect(pyramid(5)).toHaveLength(5);
+    })
 })
+
