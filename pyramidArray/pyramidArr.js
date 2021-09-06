@@ -17,7 +17,7 @@ const pyramid = (amount) => {
             subArr.push(i)
 
         }
-        
+
         arr.push((subArr).fill(1))
     }
 
