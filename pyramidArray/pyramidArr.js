@@ -23,3 +23,5 @@ const pyramid = (amount) => {
 
     return arr
 }
+
+module.exports = pyramid
