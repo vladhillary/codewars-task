@@ -27,7 +27,8 @@ class File {
     }
 
     write(str) {
-        this._filename += `\n${str}`
+        if(typeof str === 'string') this._filename += `\n${str}`
+        return false
     }
 
     strCounter() {
