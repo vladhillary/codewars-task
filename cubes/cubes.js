@@ -27,20 +27,27 @@ class Cuboid {
 
 class Cube extends Cuboid {
 
-    constructor(length) {
+    constructor(length = 0) {
         super()
         this.length = length
     }
     get surfaceArea() {
+        if (typeof this.length !== 'number') return 'enter a nubmer for create instance'
         return 6 * Math.pow(this.length, 2)
     }
     get volume() {
+        if (typeof this.length !== 'number') return 'enter a nubmer for create instance'
         return this.length * this.length * this.length
     }
     set surfaceArea(sA) {
+        if (typeof this.length !== 'number') return 'enter a nubmer for create instance'
+        if (typeof sA !== 'number') return 'enter a nubmer for use this method'
         this.length = Math.pow(sA / 6, 1 / 2)
     }
     set volume(v) {
+        if (typeof v !== 'number') return 'enter a nubmer for use this method'
         this.length = Math.pow(v, 1 / 3)
     }
 }
+
+module.exports = Cube
