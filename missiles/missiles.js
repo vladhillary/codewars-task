@@ -10,3 +10,5 @@ function launchAll(launchMissile) {
 
     }
 }
+
+module.exports= launchAll
