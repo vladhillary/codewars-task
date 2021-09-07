@@ -14,7 +14,7 @@ class Cuboid {
 
     get volume() {
 
-        return this.length * this.length * this.length;
+        return Math.pow(this.length, 3)
     }
 
     set surfaceArea(sA) {
@@ -37,7 +37,7 @@ class Cube extends Cuboid {
     }
     get volume() {
         if (typeof this.length !== 'number') return 'enter a nubmer for create instance'
-        return this.length * this.length * this.length
+        return Math.pow(this.length, 3)
     }
     set surfaceArea(sA) {
         if (typeof this.length !== 'number') return 'enter a nubmer for create instance'

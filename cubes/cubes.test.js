@@ -1,6 +1,6 @@
 const Cube = require('./cubes')
 
-test('Same structure', () => {
+it('Same structure', () => {
 
     expect(new Cube(20)).not.toStrictEqual(
         {
@@ -22,6 +22,27 @@ test('Same structure', () => {
 
 })
 
+describe('Return value by methods of class', () => {
+
+    const test = new Cube(5)
+
+    it('get volume', () => {
+
+        expect(test.volume).toBe(125)
+    })
+
+    it('get surfaceArea', () => {
+        expect(test.surfaceArea).toBe(150)
+    })
+
+    it('set volume', () => {
+        expect(test.volume = 8).toBe(8)
+    })
+
+    it('set surfaceArea', () => {
+        expect(test.surfaceArea = 54).toBe(54)
+    })
+})
 
 describe('Method shoud be defined', () => {
 
