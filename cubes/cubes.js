@@ -30,14 +30,16 @@ class Cube extends Cuboid {
     constructor(length = 0) {
         super()
         this.length = length
+        this._volume = Math.pow(this.length, 3)
+        this._surfaceArea = 6 * Math.pow(this.length, 2)
     }
     get surfaceArea() {
         if (typeof this.length !== 'number') return 'enter a nubmer for create instance'
-        return 6 * Math.pow(this.length, 2)
+        return this._surfaceArea
     }
     get volume() {
         if (typeof this.length !== 'number') return 'enter a nubmer for create instance'
-        return Math.pow(this.length, 3)
+        return this._volume
     }
     set surfaceArea(sA) {
         if (typeof this.length !== 'number') return 'enter a nubmer for create instance'
