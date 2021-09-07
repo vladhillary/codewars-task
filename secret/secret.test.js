@@ -14,11 +14,11 @@ test('Same structure', () => {
         {
             value: [1, 2, 3],
             getSecret() {
-                return this._value
+                return this.value
             },
 
             setSecret(newSecret) {
-                this._value = newSecret
+                this.value = newSecret
             }
         }
     )
