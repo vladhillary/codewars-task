@@ -2,7 +2,7 @@
 
 class File {
 
-    constructor(fullname = 'example.txt', contents='') {
+    constructor(fullname = 'example.txt', contents = '') {
         this._fullname = fullname
         this._filename = contents
         this._extension = this._fullname.split('.').pop();
@@ -27,8 +27,9 @@ class File {
     }
 
     write(str) {
-        if(typeof str === 'string') this._filename += `\n${str}`
-        return false
+        if (typeof str !== 'string') return false
+        this._filename += `\n${str}`
+
     }
 
     strCounter() {
