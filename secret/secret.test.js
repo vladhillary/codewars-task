@@ -10,20 +10,20 @@ test('Create inherited class', () => {
 
 test('Same structure', () => {
 
-    expect(new Obj([1,2,3])).not.toStrictEqual(
+    expect(new Obj([1, 2, 3])).not.toStrictEqual(
         {
-            value: [1,2,3],
+            value: [1, 2, 3],
             getSecret() {
-                return this.value
+                return this._value
             },
 
             setSecret(newSecret) {
-                this.value = newSecret
+                this._value = newSecret
             }
         }
     )
 })
-describe('Method shoud be defined', () => {
+describe('Method tests', () => {
 
     const test = new Obj()
 
@@ -33,6 +33,11 @@ describe('Method shoud be defined', () => {
     it('getSecret should be defined', () => {
         expect(test.getSecret).toBeDefined()
     })
+
+    it('getSecret method', () => {
+        expect(test.getSecret()).toBe('some secret')
+    })
+
 })
 
 
