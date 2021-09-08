@@ -18,6 +18,8 @@ describe('Return values', () => {
         expect(pyramid(true, false)).toBe('Enter a number')
         expect(pyramid(null)).toBe('Enter a number')
         expect(pyramid(undefined)).toBe('Enter a number')
+        expect(pyramid(0)).toEqual([])
+        expect(pyramid(3)).toEqual([[1], [1, 1], [1, 1, 1]])
     })
 
     it('length of results', () => {
