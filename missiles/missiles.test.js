@@ -1,11 +1,26 @@
+const { launchAll } = require('./missiles')
+const { launchMissile } = require('./missiles')
+jest.useFakeTimers()
 
+describe('test launch func', () => {
 
-// jest.useFakeTimers()
+    it('test', done => {
 
-// it('test', () => {
-//     const launchAll = require('./missiles')
-//     launchAll()
+        try {
 
-//     expect(setTimeout).toHaveBeenLastCalledWith(expect.any(Function), 1000)
-// })
+            const launchMissile = jest.fn();
 
+            launchAll(launchMissile)
+
+            jest.advanceTimersByTime(1000);
+
+            expect(launchMissile).toHaveBeenCalled()
+            expect(launchMissile).toBeCalled();
+            done()
+
+        } catch (err) {
+            done(err)
+        }
+
+    })
+})

@@ -8,7 +8,7 @@ const launchMissile = (missile) => {
 
 }
 
-function launchAll() {
+function launchAll(launchMissile) {
 
     for (let i = 0; i < 5; i++) {
 
@@ -22,6 +22,9 @@ function launchAll() {
     }
 }
 
-launchAll()
+launchAll(launchMissile)
 
-module.exports = launchAll
+module.exports = {
+    launchAll,
+    launchMissile
+}
