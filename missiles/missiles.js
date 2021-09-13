@@ -21,6 +21,6 @@ function launchAll() {
     }
 }
 
-launchAll()
+module.exports= launchAll
 
-module.exports = launchAll
+launchAll()
