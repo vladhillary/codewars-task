@@ -1,10 +1,12 @@
 const startMissiles = [false, false, false, false, false]
-const missiles = [1,2,3,4,5]
+
+const missiles = [1, 2, 3, 4, 5]
 
 const launchMissile = (missile) => {
     const indexLaunchedMissiles = missiles.indexOf(missile)
+    
+    missiles.splice(indexLaunchedMissiles, 1)
 
-    missiles.splice(indexLaunchedMissiles,1)
 }
 
 function launchAll() {
@@ -13,7 +15,7 @@ function launchAll() {
 
         setTimeout(() => {
 
-            launchMissile(i+1)
+            launchMissile(i + 1)
 
             startMissiles.splice(i, 1, true)
 
@@ -21,6 +23,10 @@ function launchAll() {
     }
 }
 
-module.exports= launchAll
+launchAll(launchMissile)
 
-launchAll()
+module.exports = {
+    launchAll,
+    launchMissile
+}
+
