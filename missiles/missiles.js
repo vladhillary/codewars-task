@@ -1,14 +1,15 @@
 const startMissiles = [false, false, false, false, false]
+
 const missiles = [1, 2, 3, 4, 5]
 
 const launchMissile = (missile) => {
     const indexLaunchedMissiles = missiles.indexOf(missile)
-
+    
     missiles.splice(indexLaunchedMissiles, 1)
 
 }
 
-function launchAll(launchMissile) {
+function launchAll() {
 
     for (let i = 0; i < 5; i++) {
 
@@ -28,3 +29,4 @@ module.exports = {
     launchAll,
     launchMissile
 }
+

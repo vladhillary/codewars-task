@@ -3,7 +3,7 @@ const { Dog } = require('./animal')
 const { Cat } = require('./animal')
 const { Shark } = require('./animal')
 
-test('Create inherited class', () => {
+it('Create inherited class', () => {
 
     const testDog = new Dog()
     const testCat = new Cat()
@@ -15,7 +15,7 @@ test('Create inherited class', () => {
 
 })
 
-test('Same structure', () => {
+it('Same structure', () => {
 
     expect(new Animal('Baley', 5, 4, 'sabretooth', 'tiger')).not.toStrictEqual(
         {
@@ -67,5 +67,24 @@ test('Same structure', () => {
             }
         })
 
+})
+
+describe('Method tests', () => {
+
+    const dog = new Dog('Daggy', 3, 'dog', 'Owner')
+    const cat = new Cat('Sally', 1, 'cat')
+
+    it('introduce method from Dog by extend Animal', () => {
+
+        expect(dog.introduce()).toBe(`Hello, my name is Daggy and I am 3 years old.`)
+    })
+
+    it('greetMaster by Dog', () => {
+        expect(dog.greetMaster()).toBe(`Hello Owner`)
+    })
+
+    it('introduce method by Cat', () => {
+        expect(cat.introduce()).toBe(`Hello, my name is Sally and I am 1 years old.  Meow meow!`)
+    })
 })
 

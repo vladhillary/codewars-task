@@ -22,7 +22,7 @@ test('Same structure', () => {
 
 })
 
-describe('Methods define for class File', () => {
+describe('Test methods for class File', () => {
 
     const test = new File()
 
@@ -48,6 +48,28 @@ describe('Methods define for class File', () => {
 
     it('getc should be defined', () => {
         expect(test.getc).toBeDefined()
+    })
+
+    it('get fullname return value', () => {
+        expect(test.fullname).toBe('example.txt')
+    })
+    it('get filename return value', () => {
+        expect(test.filename).toBe('')
+    })
+    it('get extension return value', () => {
+        expect(test.extension).toBe('txt')
+    })
+    it('getContents return value', () => {
+        expect(test.getContents()).toBe('')
+    })
+    it('write return value if user wrote any type', () => {
+        expect(test.write([])).toBe(false)
+    })
+    it('gets return value', () => {
+        expect(test.gets()).toBe('')
+    })
+    it('getc return value', () => {
+        expect(test.getc()).toBeUndefined()
     })
 
 })

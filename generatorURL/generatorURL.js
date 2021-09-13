@@ -10,8 +10,10 @@ function generateName() {
 
     }
 
-    if (!photoManager.nameExists(randomURL)) return randomURL
+    if (!photoManager.nameExists(randomURL)) return randomURL  // при запуске теста jest не видит объект photoManager, который дан по условию codewars, если убрать условие тест проходит
 
     return generateName()
 
 }
+
+module.exports = generateName
