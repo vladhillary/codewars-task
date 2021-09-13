@@ -1,5 +1,5 @@
-class obj {
-    constructor(secret) {
+class Obj {
+    constructor(secret='some secret') {
         this.value = secret
     }
 
@@ -13,6 +13,8 @@ class obj {
 }
 
 function createSecretHolder(secret) {
-    const newObj = new obj(secret)
+    const newObj = new Obj(secret)
     return newObj
 }
+
+module.exports = Obj
